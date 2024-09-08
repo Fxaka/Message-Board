@@ -1,0 +1,74 @@
+body, html {  
+    height: 100%;  
+    margin: 0;  
+    overflow: hidden; /* 防止滚动条出现，如果需要滚动内容则不要添加此属性 */  
+  }  
+    
+  .background-image {  
+    /* 设置背景图片 */  
+    background-image: url('images/background.jpg'); /* 替换为你的图片URL */  
+    background-size: cover; /* 覆盖整个容器 */  
+    background-position: center; /* 居中显示 */  
+    position: fixed; /* 固定定位，确保背景图片不会随页面滚动而移动 */  
+    top: 0;  
+    left: 0;  
+    width: 100%;  
+    height: 100%;  
+    z-index: -1; /* 确保表单位于背景之上 */  
+  }  
+    
+  .message-form {  
+    position: absolute; /* 绝对定位，使其脱离文档流并相对于最近的已定位祖先元素进行定位（如果没有则相对于初始包含块） */  
+    margin-top:450px;
+    left: 50%;
+    width: 800px;
+    height:550px;  
+    transform: translate(-50%, -50%); /* 居中表单 */  
+    background-color: rgba(255, 255, 255, 0.6); /* 半透明背景，以便看到背景图片 */  
+    padding: 20px;  
+    border-radius: 8px; /* 圆角边框 */  
+    z-index: 1; /* 确保表单位于背景之上 */  
+  }
+
+  .message-form h1{
+    text-align:center;
+    font-family:Serif;
+    font-size: 35px;
+  }
+
+  .content{
+    text-align: center;
+    font-size: 18px;
+  }
+
+  .message-form textarea{
+    width: 680px;
+    height: 400px;
+    padding-left: 2px;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    background-color:rgba(255, 255, 255, 0.5);
+    border:2px solid gray;
+    border-radius: 4px;
+    text-indent: 5px; /*提示文字距离左边框的距离*/
+    font-size: 18px; /*提示文字大小*/
+    box-sizing: border-box;
+  }
+
+  .message-form input[type=submit]{
+    background-image: linear-gradient(60deg, #64b3f4 0%, #c2e59c 100%);
+    border-radius: 4px;
+    width: 10%;
+    padding:5px;
+    border:2px solid gray;
+    font-size: 16px;
+    cursor: pointer;
+    box-sizing: border-box;
+  }
+
+  .message-form input[type=submit]:hover {
+    background-image: linear-gradient(to top, #007adf 0%, #00ecbc 100%);
+  }
+
+
+

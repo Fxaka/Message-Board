@@ -1,0 +1,53 @@
+body, html {  
+  height: 100%;  
+  margin: 0;  
+  overflow: hidden; /* 防止滚动条出现，如果需要滚动内容则不要添加此属性 */  
+}  
+  
+.background-image {  
+  /* 设置背景图片 */  
+  background-image: url('images/background.jpg'); /* 替换为你的图片URL */  
+  background-size: cover; /* 覆盖整个容器 */  
+  background-position: center; /* 居中显示 */  
+  position: fixed; /* 固定定位，确保背景图片不会随页面滚动而移动 */  
+  top: 0;  
+  left: 0;  
+  width: 100%;  
+  height: 100%;  
+  z-index: -1; /* 确保表单位于背景之上 */  
+}
+
+.container {  
+  position: absolute;  
+  top: 50%;  
+  left: 50%;  
+  transform: translate(-50%, -50%);  
+  width: 80%;  
+  height: 90%; /* 稍微调整高度以留出空间 */  
+  border: 5px solid gray;  
+  background-color: rgba(255, 255, 255, 0.7);  
+  border-radius: 20px;  
+  overflow-y: auto; /* 允许容器内部垂直滚动 */  
+  padding: 20px; /* 为内部内容添加一些内边距 */  
+}  
+  
+.message {  
+  /* 移除position: absolute; */  
+  border: 3px solid gray;  
+  margin-bottom: 10px; /* 在消息之间添加一些间距 */  
+  border-radius: 25px;  
+  background-color: rgba(255, 255, 255, 0.9); /* 提高对比度以便更容易阅读 */  
+  padding: 10px; /* 为内容添加内边距 */  
+}  
+  
+.message h3 {  
+  /* 移除position: relative; 和 top/left 调整 */  
+  font-size: 20px;  
+  margin: 0; /* 移除默认的标题边距 */  
+}  
+  
+.message p {  
+  font-size: 18px;  
+  margin: 0; /* 移除默认的段落边距 */  
+}
+

@@ -1,0 +1,81 @@
+body, html {  
+    height: 100%;  
+    margin: 0;  
+    overflow: hidden; /* 防止滚动条出现，如果需要滚动内容则不要添加此属性 */  
+  }  
+    
+  .background-image {  
+    /* 设置背景图片 */  
+    background-image: url('images/background.jpg'); /* 替换为你的图片URL */  
+    background-size: cover; /* 覆盖整个容器 */  
+    background-position: center; /* 居中显示 */  
+    position: fixed; /* 固定定位，确保背景图片不会随页面滚动而移动 */  
+    top: 0;  
+    left: 0;  
+    width: 100%;  
+    height: 100%;  
+    z-index: -1; /* 确保表单位于背景之上 */  
+  }  
+    
+  .login-form {  
+    position: absolute; /* 绝对定位，使其脱离文档流并相对于最近的已定位祖先元素进行定位（如果没有则相对于初始包含块） */  
+    top: 40%;  
+    left: 50%;
+    width: 30%;
+    height:28%;  
+    transform: translate(-50%, -50%); /* 居中表单 */  
+    background-color: rgba(255, 255, 255, 0.6); /* 半透明背景，以便看到背景图片 */  
+    padding: 20px;  
+    border-radius: 8px; /* 圆角边框 */  
+    z-index: 1; /* 确保表单位于背景之上 */  
+  }
+
+  .login-form h1{
+    text-align:center;
+    font-family:Serif;
+    font-size: 35px;
+  }
+
+  .content{
+    text-align: center;
+    font-size: 18px;
+  }
+
+  .login-form input[type=text]{
+    width: 200px;
+    padding:3px 5px;
+    background-color:rgba(255, 255, 255, 0.5);
+    border:2px solid gray;
+    border-radius: 4px;
+    box-sizing: border-box;
+  }
+
+  .login-form input[type=password]{
+    width: 200px;
+    padding:3px 5px; /*调整内边距的属性,分别调整边框大小,光标距离文本框左侧的距离*/
+    background-color:rgba(255, 255, 255, 0.5);
+    border:2px solid gray;
+    border-radius: 4px;
+    box-sizing: border-box;
+  }
+
+  .login-form input[type=submit]{
+    position:relative;
+    top: 15px;
+    left: 10px;
+    width:90px;
+    height: 30px;
+    font-size: 16px;
+    font-family: Serif;
+    background-image: linear-gradient(60deg, #64b3f4 0%, #c2e59c 100%);
+    border:2px solid gray;
+    border-radius: 4px;
+    cursor: pointer;
+  }
+
+  .login-form input[type=submit]:hover {
+    background-image: linear-gradient(to top, #007adf 0%, #00ecbc 100%);
+  }
+
+
+ 
